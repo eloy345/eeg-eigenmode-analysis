@@ -188,18 +188,11 @@ Features from eigenvector participation across EEG regions:
 
 ---
 
-
-## License
-
-License to be confirmed. Please contact the authors before reuse beyond academic review.
-
----
-
 ## Contact
 
 For questions about the methodology or code:
-- [Your name and email]
-- [Lab/institution website]
+- Eloy García Pérez eloygap99@gmail.com
+
 
 **Note**: We cannot provide the raw EEG data. Please see [reproducibility notes](docs/reproducibility_notes.md) for details.
 
