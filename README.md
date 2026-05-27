@@ -61,7 +61,7 @@ results/eigenmodes/          # Eigenvalues and eigenvectors
     ↓
 results/features/            # Extracted feature tables
     ↓
-statistics / ML / fusion     # Analysis notebooks (to be provided)
+statistics / ML / fusion     # Analysis notebooks
 ```
 
 For detailed workflow, see [`docs/workflow.md`](docs/workflow.md).
@@ -105,7 +105,7 @@ For detailed workflow, see [`docs/workflow.md`](docs/workflow.md).
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/eeg-eigenmode-analysis.git
+git clone https://github.com/eloy345/eeg-eigenmode-analysis.git
 cd eeg-eigenmode-analysis
 
 # Create virtual environment
