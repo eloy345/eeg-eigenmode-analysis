@@ -321,22 +321,13 @@ If you use this code in your research, please cite:
 ```bibtex
 @software{eegigenmode2024,
   title={EEG Eigenmode Analysis Pipeline},
-  author={[Author names]},
-  year={2024},
+  author={[García-Pérez Eloy]},
+  year={2026},
   url={https://github.com/yourusername/eeg-eigenmode-analysis}
 }
 ```
 
 And cite the original paper:
-
-```bibtex
-@article{paperyear2024,
-  title={[Paper title]},
-  author={[Authors]},
-  journal={[Journal]},
-  year={2024}
-}
-```
 
 ---
 
