@@ -6,7 +6,7 @@ This repository documents the EEG preprocessing and feature extraction pipeline 
 
 ---
 
-## ⚠️ Important Note on Data Availability
+## Important Note on Data Availability
 
 **The raw EEG data used in this study cannot be publicly shared** due to ethical and privacy restrictions (study involves minors). This repository provides:
 
