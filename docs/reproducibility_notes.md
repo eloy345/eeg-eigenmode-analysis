@@ -45,28 +45,6 @@ This document clarifies the scope of this repository and limitations regarding c
 
 ---
 
-## Why Data Cannot Be Shared
-
-### Ethical Constraints
-
-The EEG data used in this study:
-1. Were collected from **minors**
-2. Required **informed consent** from parents/guardians
-3. Were approved by **ethics committee** under specific conditions
-4. **Cannot be publicly released** regardless of anonymization
-
-### Legal/Regulatory
-
-- EU GDPR: Protects data of minors
-- Local privacy laws: May restrict data sharing
-- Institutional policy: Limits public data dissemination
-
-### Scientific Practice
-
-Even in studies that do share data, EEG from minors is typically restricted to verified researchers within institutions.
-
----
-
 ## Scope of Reproducibility
 
 ### ✅ Can Be Reproduced
@@ -232,7 +210,7 @@ Analysis used multiple window sizes: [1, 2, 4, 8, 16] seconds
 
 This pipeline was developed and tested on:
 - **Subject group**: Minors
-- **Recording equipment**: [Specify if known]
+- **Recording equipment**: Bitbrain Versatile 32ch
 - **Electrode montage**: Standard 10-20 system (~30 channels)
 - **Tasks**: Baseline (basal) and visual attention (PVT)
 - **Recording duration**: ~10 minutes per condition
@@ -308,9 +286,9 @@ This pipeline was developed and tested on:
 ## Contact for Questions
 
 For questions about:
-- **Methodology**: [Author contact]
-- **Code usage**: [Author contact]
-- **Data access**: See ethics committee or [Institution contact]
+- **Methodology**: eloygap99@gmail.com
+- **Code usage**:  eloygap99@gmail.com
+
 
 ---
 
@@ -339,6 +317,3 @@ And cite the original paper:
 
 ---
 
-## License
-
-License to be confirmed. Please contact the authors before reuse beyond academic review.
