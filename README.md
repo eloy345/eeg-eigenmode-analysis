@@ -197,7 +197,3 @@ For questions about the methodology or code:
 **Note**: We cannot provide the raw EEG data. Please see [reproducibility notes](docs/reproducibility_notes.md) for details.
 
 ---
-
-## Acknowledgments
-
-This work was supported by [funding sources]. EEG data collection was approved by [ethics committee].
