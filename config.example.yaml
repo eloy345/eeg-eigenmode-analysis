@@ -1,0 +1,74 @@
+# EEG Eigenmode Analysis Pipeline - Configuration Template
+# Copy this file to config.yaml and adjust paths for your system
+
+# ============================================================================
+# BASE DIRECTORIES
+# ============================================================================
+
+base_dir: "."
+
+# Input directories
+crop_dir: "data/EEG_crop"           # Cropped raw EEG files (.fif format)
+clean_dir: "data/EEG_clean_v3_full" # Preprocessed EEG output
+
+# Metadata
+meta_csv: "data/meta.csv"           # Subject metadata (ID, group, etc.)
+
+# Output directories
+eigenmodes_all_dir: "results/eigenmodes/all_channels"
+eigenmodes_no_occipital_dir: "results/eigenmodes/no_occipital"
+global_spectral_geometry_dir: "results/features/global_spectral_geometry"
+dominant_mode_spatial_distribution_dir: "results/features/dominant_mode_spatial_distribution"
+
+# ============================================================================
+# EIGENMODE COMPUTATION
+# ============================================================================
+
+# Sliding window parameters
+windows: [1.0, 2.0, 4.0, 8.0, 16.0]  # Window sizes in seconds
+step_sec: 1.0                         # Step size for sliding windows
+
+# Channel exclusion for no-occipital analysis
+occipital_channels: ["O1", "O2", "Oz", "POz"]
+
+# ============================================================================
+# PREPROCESSING PARAMETERS
+# ============================================================================
+
+preprocessing:
+  # Notch filter (remove power line noise)
+  notch_freq: 50                    # 50 Hz (Europe) or 60 Hz (US/Americas)
+  
+  # Bandpass filter
+  bandpass_low: 1                   # High-pass cutoff (Hz)
+  bandpass_high: 40                 # Low-pass cutoff (Hz)
+  
+  # Channel interpolation
+  interpolate_bads: true            # Interpolate bad channels
+  
+  # Common average reference
+  apply_car: true                   # Apply CAR rereferencing
+
+# ============================================================================
+# FEATURE EXTRACTION
+# ============================================================================
+
+# Global spectral geometry
+spectral:
+  osc_tau: 0.20                     # Threshold for oscillatory modes (Im > tau)
+  filter_imag_pos: true             # Use only Im(λ) >= 0 (avoid conjugates)
+  delta_mode: "rel"                 # Delta computation: "rel" or "diff"
+  delta_eps: 1.0e-9                 # Epsilon for relative delta
+
+# Dominant-mode spatial distribution
+spatial:
+  core_channels: ["T7", "T8", "P7", "P8"]  # Core temporoparietal region
+  participation_power: 2            # Power for participation vector
+  kinds: ["all"]                    # Mode selection: ["all", "near0", "osc"]
+  
+  # Regional definitions (10-20 system)
+  regions:
+    frontal: ["Fp1", "Fpz", "Fp2", "AF3", "AF4", "F7", "F3", "Fz", "F4", "F8"]
+    central: ["FC5", "FC1", "FC2", "FC6", "C3", "Cz", "C4", "CP1", "CP2", "CP5", "CP6"]
+    temporal: ["T7", "T8"]
+    parietal: ["P7", "P3", "Pz", "P4", "P8"]
